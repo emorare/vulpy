@@ -1,0 +1,12 @@
+dist: xenial
+language: python
+python:
+  - "3.8"
+  - "3.9"
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+  - pip install flake8
+script:
+  - flake8 bad
+  - bash sonar_scanner.sh
